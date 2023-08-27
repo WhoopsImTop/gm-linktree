@@ -16,6 +16,7 @@
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.19.3",
+    "firebase": "^10.3.0",
     "jspdf": "^2.5.1",
     "nuxt": "^2.15.8",
     "nuxt-jsonld": "^1.5.7",

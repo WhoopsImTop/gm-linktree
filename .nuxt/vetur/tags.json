@@ -1,41 +1,14 @@
 {
-  "AboutUs": {
-    "description": "Auto imported from components/aboutUs.vue"
-  },
-  "BookingBtn": {
-    "description": "Auto imported from components/bookingBtn.vue"
-  },
-  "Divider": {
-    "description": "Auto imported from components/divider.vue"
-  },
   "EliasEnglenLogo": {
     "description": "Auto imported from components/EliasEnglenLogo.vue"
   },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
   },
-  "GoogleReviews": {
-    "description": "Auto imported from components/googleReviews.vue"
-  },
   "Header": {
     "description": "Auto imported from components/Header.vue"
   },
-  "ImageGrid": {
-    "description": "Auto imported from components/imageGrid.vue"
-  },
   "MainHeader": {
     "description": "Auto imported from components/mainHeader.vue"
-  },
-  "NuxtLogo": {
-    "description": "Auto imported from components/NuxtLogo.vue"
-  },
-  "Preisliste": {
-    "description": "Auto imported from components/preisliste.vue"
-  },
-  "UnserePreise": {
-    "description": "Auto imported from components/unserePreise.vue"
-  },
-  "UnsereProdukte": {
-    "description": "Auto imported from components/unsereProdukte.vue"
   }
 }
