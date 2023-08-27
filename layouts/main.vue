@@ -1,24 +1,11 @@
 <template>
   <div>
-    <Header></Header>
-    <booking-btn></booking-btn>
     <Nuxt />
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
-import BookingBtn from '../components/bookingBtn.vue';
-export default {
-  components: {
-    Header,
-    Footer,
-  },
-};
-</script>,
-    BookingBtn
+</script>
 
 <style>
 /* poppins-200 - latin */

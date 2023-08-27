@@ -25,8 +25,8 @@
             ></EliasEnglenLogo
           ></a>
           <div class="link-container">
-            <nuxt-link to="/impressum">Impressum</nuxt-link>
-            <nuxt-link to="/datenschutz">Datenschutz</nuxt-link>
+            <a href="https://gmhairstudio.de/impressum" target="_blank">Impressum</a>
+            <a href="https://gmhairstudio.de/datenschutz" target="_blank">Datenschutz</a>
           </div>
         </div>
         <div class="copyright">

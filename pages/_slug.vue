@@ -1,11 +1,31 @@
 <template>
-  <div class="content-container" style="margin-top: 130px">
-    <nuxt-content :document="page"></nuxt-content>
+  <div>
+    <div class="content-container linktree" style="margin-top: 70px">
+      <img class="avatar" :src="page.profile_picture" alt="Profilbild" />
+      <h1>{{ page.username }}</h1>
+
+      <div class="link-container">
+        <a
+          v-for="(link, index) in page.links"
+          :key="index"
+          class="linktree_btn"
+          :href="link.link"
+          ><img v-if="link.icon" width="25px" height="25px" style="margin-right: 10px;" :src="link.icon" alt="icon">{{ link.button }}</a
+        >
+      </div>
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 export default {
+  components: {
+    Header,
+    Footer,
+  },
   layout: "main",
   data() {
     return {
@@ -17,6 +37,10 @@ export default {
     return { page };
   },
 
+  created() {
+    console.log(this.page);
+  },
+
   head() {
     return {
       title: this.page.title,
@@ -26,50 +50,6 @@ export default {
           name: "description",
           content: this.page.description,
         },
-      ],
-    };
-  },
-  
-  jsonld() {
-    return {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      name: "GM Professional Hairstudio",
-      image: "https://gmhairstudio.de/img/logo.svg",
-      "@id": "",
-      url: "https://gmhairstudio.de",
-      telephone: "+49 761 51463046",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Ellen-Gottlieb-Straße 15",
-        addressLocality: "Güterbahnhof, Freiburg im Breisgau",
-        postalCode: "79106",
-        addressCountry: "DE",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 48.014648,
-        longitude: 7.848021,
-      },
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-          ],
-          opens: "09:00",
-          closes: "19:00",
-        },
-      ],
-      sameAs: [
-        "https://www.facebook.com/gm.professional.hairstudio",
-        "https://www.instagram.com/gm.professional.hairstudio/",
-        "https://www.studiobookr.com/en/gm-professional-hairstudio-67752?fbclid=PAAaacxS00Iiygaf2pJYMOxNU3ITaO9L6gxGmw2-jAIA4GXiw6rqmavZbfgxA#/",
       ],
     };
   },
@@ -85,5 +65,47 @@ export default {
 .content-container h4 {
   color: var(--orange-color);
   text-decoration: none;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+
+.linktree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.link-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  width: 80%;
+}
+
+.linktree_btn {
+  border: 2px solid var(--orange-color);
+  color: var(--text-light);
+  padding: 8px 15px;
+  border-radius: 50px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 </style>
