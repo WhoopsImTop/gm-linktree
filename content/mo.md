@@ -8,9 +8,9 @@ links:
     - link: https://www.instagram.com/barber_mo_/?hl=de
       button: Instagram
       icon: './img/instagram.png'
-    - link: https://www.studiobookr.com/en/gm-professional-hairstudio-67752
+    - link: https://barber-mo.com/online-booking
       button: Termin Buchen
-    - link: https://gmhairstudio.de
+    - link: https://barber-mo.com/
       button: Webseite
     - link: https://goo.gl/maps/6nQcE3kPMdruJP6BA
       button: Google Standort
